@@ -5,6 +5,7 @@ type="text/css"
 href=".\css\estilo.css">
 
 <script>
+document.oncontextmenu = function(){return false}
 var container = document.querySelector('.contenedor');
 var msnry = new Masonry( container, {
 itemSelector: '.elemento'

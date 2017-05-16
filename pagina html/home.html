@@ -7,12 +7,30 @@ href=".\css\estilo.css">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <script>
 document.oncontextmenu = function(){return false}
+
+function mueveReloj(){ 
+   	momentoActual = new Date() 
+   	hora = momentoActual.getHours() 
+   	minuto = momentoActual.getMinutes() 
+   	segundo = momentoActual.getSeconds() 
+
+   	horaImprimible = hora + " : " + minuto + " : " + segundo 
+
+   	document.form_reloj.reloj.value = horaImprimible 
+
+   	setTimeout("mueveReloj()",1000) 
+} 
 </script>
 </head>
-<body>
-<font color="black">
+<body onload="mueveReloj()">
+<font color="black" size=3>
+<form name="form_reloj" align="center">
+<p>La hora es:</p>
+<input type="text" name="reloj" size="10"> 
+</form> 
 <center><h1>&#34;La historia de mi vida&#34;</h1></center>
 <img src=".\imagenes\icono.png" class="icono" align="right">
+<br>
 <a href="#ancla2">Fin</a>
 </font>
 <font color="black" size=5>
@@ -41,10 +59,11 @@ En general soy una persona muy seria&#44; pero aun as&#237; han pasado acontecim
 que llegan a ser interesantes para algunos&#46;
 Me gusta mucho viajar pero lamentablemente no suelo hacerlo muy seguido&#44; falta de recursos econ&#243;micos&#44;
 pero las veces que he viajado me a encantado mucho hacerlo&#46;
-<code>
+</code>
 </font>
 </p>
 <a href="#ancla1">Inicio</a>
 <a name="ancla2"></a>
+</div>
 </body>
 </html>

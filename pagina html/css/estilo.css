@@ -34,7 +34,7 @@ transform: rotate(2deg);
 cursor: pointer;
 position: fixed;
 left: 930px;
-top: 0px;
+top: 1px;
 box-shadow: none;
 }
 .dropdown {
@@ -134,4 +134,8 @@ width:100%;
 .social ul li a:hover {
 	background: #000;
 	padding: 10px 30px;
+}
+
+form{
+	position: fixed;
 }
